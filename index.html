@@ -3,12 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- add font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sen:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- add font -->
+    <!-- css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- css -->
     <title>Figma-to-HTML</title>
   </head>
-  <body>
-    <h1>Figma-to-HTML</h1>
-    <h2>Hello</h2>
+  <body style="height: 10000px">
+    <!-- header -->
+    <header class="header fixed">
+      <div class="main-content">
+        <div class="body">
+          <img src="./assets/img/logo.svg" alt="Lesson." class="logo" />
+          <nav class="nav">
+            <ul>
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+          </nav>
+          <div class="action">
+            <a class="btn btn-sign-up" href="#">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header là thẻ có ngữ nghĩa -->
+    <!-- main -->
+    <main>
+      <div class="hero">
+        <div class="main-content">
+          <div class="body">
+            <!-- left -->
+            <div class="media-block">
+              <img
+                class="img"
+                src="./assets/img/hero-img-v2.jpg"
+                alt="Learn without limits and spread knowledge."
+              />
+              <!--  -->
+              <div class="hero-summary">
+                <!-- item1 -->
+                <div class="item">
+                  <div class="icon">
+                    <img src="./assets/icon/orion.svg" alt="" />
+                  </div>
+                  <div class="info">
+                    <p class="label">20 Courses</p>
+                    <p class="title">UI/UX Design</p>
+                  </div>
+                </div>
+                <!-- item2 -->
+                <div class="item">
+                  <div class="icon">
+                    <img src="./assets/icon/dev.svg" alt="" />
+                  </div>
+                  <div class="info">
+                    <p class="label">20 Courses</p>
+                    <p class="title">Development</p>
+                  </div>
+                </div>
+                <!-- item3 -->
+                <div class="item">
+                  <div class="icon">
+                    <img src="./assets/icon/marketing.svg" alt="" />
+                  </div>
+                  <div class="info">
+                    <p class="label">30 Courses</p>
+                    <p class="title">Marketing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- right -->
+            <div class="content-block">
+              <h1 class="heading">
+                Learn without limits and spread knowledge.
+              </h1>
+              <p class="desc">
+                Build new skills for that “this is my year” feeling with
+                courses, certificates, and degrees from world-class universities
+                and companies.
+              </p>
+              <!-- cta: call to action -->
+              <div class="cta-group">
+                <a href="#" class="btn btn-see-course">See Courses</a>
+                <button type="button" class="watch-video">
+                  <div class="icon">
+                    <img src="./assets/icon/play.svg" alt="" />
+                  </div>
+                  <span>Watch Video</span>
+                </button>
+              </div>
+              <p class="desc">Recent engagement</p>
+              <p class="desc desc-student-course">
+                <strong>50K</strong> Students <strong>70+</strong> Courses
+              </p>
+
+              <!-- <div class="student-course">
+                <div class="">
+                  <h1>50k</h1>
+                  <div class="desc">student-course</div>
+                </div>
+                <div class="">
+                  <h1>50k</h1>
+                  <div class="desc">student-course</div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- thẻ main là thẻ có ngữ nghĩa -->
   </body>
 </html>

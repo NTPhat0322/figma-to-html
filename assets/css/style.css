@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-heading: "Sen", serif;
+  --primary-color: #ffb900;
+}
+
 html {
   /* chuyển 1 rem = 16px thành 1 rem = 10px */
   font-size: 62.5%;
@@ -10,4 +15,308 @@ html {
 /* khôi phục lại cỡ chữ mặc định: 16px */
 body {
   font-size: 1.6rem;
+  font-family: "Poppins", serif;
+}
+
+/* =========================== */
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0px 16px;
+  line-height: 50px;
+  min-width: 118px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background-color: #171100;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.main-content {
+  width: 1170px;
+  margin: 0 auto;
+
+  /* 
+    nếu không có dòng dưới thì width luôn cố định 1170px
+    nên khi kéo web nhỏ lại thì sẽ bị che mất ndung
+    
+    nếu có thì khi kéo nhỏ lại thì width cũng sẽ được giảm
+    theo để cố định được 136px cho 2 bên --> k mất nội dung 
+  */
+  max-width: calc(100% - 136px);
+  /* chừa 136px cho 2 bên trang web: mỗi bên là 68px */
+
+  /* 
+    The problem with the <div> above occurs when the browser window
+    is smaller than the width of the element (500px). 
+    The browser then adds a horizontal scrollbar to the page.
+    
+    In this situation, using max-width will improve the browser's handling
+    of small windows.
+
+    dùng max-width, thì khi browser window nhỏ hơn width thì width sẽ co lại
+    khi kéo ra thì sẽ to tới max-width. Khi không dùng max-width thì khi browser
+    window nhỏ hơn width thì sẽ xuất hiện scrollbar và làm mất ndung
+  */
+
+  /*
+    nếu dùng cả width và max-width trong cùng 1 phần tử
+    mà giá trị của width lại lớn hơn max-width thì max-width sẽ được sử dụng
+    khi width < max-width thì width sẽ được dùng
+  */
+}
+
+/* =============header============== */
+
+.header {
+  background-color: #fffcf4;
+}
+
+.header.fixed {
+  z-index: 1;
+  position: sticky;
+  /* 
+    phần padding(từ text lên trên của header đang là 36px) 
+    nên chúng ta muốn sticky nó còn 8px thì chúng ta cần cho padding
+    bị mất đi 28px --> -28px
+  */
+  top: -28px;
+}
+
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+
+.nav {
+  /* margin với flex-item */
+  /* đẩy toàn bộ sang bên phải */
+  margin-left: auto;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav a {
+  font-size: 1.6rem;
+  color: #5f5b53;
+  /* background-color: aqua; */
+  padding: 0px 21px;
+  /* 
+    dùng margin vẫn dc, nhma dùng padding thì tăng trải nghiệm
+    cho người dùng hơn
+  */
+  position: relative;
+}
+.nav li.active a,
+.nav a:hover {
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+  color: #171100;
+}
+
+.nav li.active a::after {
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #171100;
+  position: absolute;
+  left: 21px;
+  top: 22px;
+}
+
+.header .btn-sign-up {
+  min-width: 144px;
+  /* 
+  The min-width property defines the minimum width of an element.
+  If the content is smaller than the minimum width, the minimum width will be applied.
+  If the content is larger than the minimum width, the min-width property has no effect.
+  Note: This prevents the value of the width property from becoming smaller than min-width.
+  */
+
+  /* 
+    min-width: khối div sẽ thu nhỏ theo browser window cho tới khi bằng min-width
+    nếu browser window nhỏ hơn min-width thì sẽ xuất hiện scroll bar
+  */
+}
+
+.header .action {
+  /* 
+  từ btn-sign-up cách reviews là 70px, nhưng ở thẻ reviews đã có 
+  sẵn 21px padding nên cần thêm 49px
+  */
+  margin-left: 49px;
+}
+
+/* ============================= */
+.hero {
+  padding: 57px 0px 64px;
+  background-color: #fffcf4;
+}
+
+.hero .body {
+  display: flex;
+}
+
+.hero .media-block {
+  width: 48%;
+  position: relative;
+}
+
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero .media-block .hero-summary {
+  position: absolute;
+  top: 393px;
+  left: 300px;
+  border-radius: 12px;
+  background: #fff;
+  width: 270px;
+  padding: 28px 24px;
+}
+
+.hero .hero-summary .item + .item {
+  margin-top: 22px;
+}
+
+.hero .hero-summary .item {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.hero .hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.hero-summary .item:first-of-type .icon {
+  background-color: #fff9e8;
+}
+
+.hero-summary .item:nth-of-type(2) .icon {
+  background-color: #fcefff;
+}
+
+.hero-summary .item:nth-of-type(3) .icon {
+  background-color: #ebeaff;
+}
+
+.hero-summary .item .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 185%;
+}
+
+.hero-summary .item .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 166%;
+}
+
+/* -------------------------------------------- */
+.hero .content-block {
+  width: 52%;
+  /* margin-left: auto; */
+  padding-left: 130px;
+  padding-top: 46px;
+}
+
+.content-block .heading {
+  width: 470px;
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 117%;
+  letter-spacing: -1.16px;
+  margin-bottom: 28px;
+}
+
+.content-block .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 167%;
+}
+
+.cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.btn-see-course {
+  min-width: 180px;
+  line-height: 64px;
+  border-radius: 32px;
+  background-color: var(--primary-color);
+}
+
+.watch-video {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  margin-left: 28px;
+  /* border: none; */
+}
+
+.watch-video .icon {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 14px;
+}
+
+.watch-video span {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 167%;
+}
+
+.desc-student-course {
+  margin-top: 8px;
+}
+
+.desc-student-course strong {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 123%;
+  margin-right: 15px;
+}
+
+.desc-student-course strong:nth-child(2) {
+  margin-left: 28px;
 }
