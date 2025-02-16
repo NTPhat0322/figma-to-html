@@ -23,6 +23,15 @@ a {
   text-decoration: none;
 }
 
+.heading-lv2 {
+  color: #171100;
+  font-family: Sen;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.26; /* 126.316% */
+  letter-spacing: -0.76px;
+}
+
 .btn {
   display: inline-block;
   padding: 0px 16px;
@@ -319,4 +328,144 @@ a {
 
 .desc-student-course strong:nth-child(2) {
   margin-left: 28px;
+}
+
+/* ======================================== */
+.popular {
+  padding: 65px 0;
+  margin-top: 135px;
+}
+
+.popular-top .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.66; /* 166.667% */
+  width: 458px;
+  margin-top: 16px;
+}
+
+.popular .popular-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popular-top .controls {
+  width: 98px;
+  height: 40px;
+  display: flex;
+  gap: 18px;
+}
+
+.popular .control-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  color: var(--primary-color);
+  /* currentColor sẽ dựa vào color */
+  border: 1px solid var(--primary-color);
+}
+
+.popular .control-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.popular .course-list {
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+}
+
+.popular .course-list .course-item {
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
+  background: #fff;
+}
+
+.popular .course-list .course-item:hover {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: #fff;
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular .course-item .thumb {
+  width: 100%;
+  height: 278px;
+  object-fit: cover;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.popular .info {
+  padding: 16px 22px 22px;
+}
+
+.popular .course-item .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular .course-item .title a {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.66; /* 166.667% */
+}
+
+.popular .course-item .rating {
+  display: flex;
+  align-items: center;
+}
+.info .rating .star {
+  width: 18px;
+  height: 18px;
+}
+
+.info .rating .value {
+  color: #fea31b;
+  line-height: 1.75; /* 175% */
+  margin-left: 6px;
+}
+
+.popular .course-item .desc {
+  margin-top: 6px;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.85; /* 185.714% */
+}
+
+.popular .course-item .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.course-item .foot .price {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.66; /* 166.667% */
+}
+
+.course-item .foot .btn-book {
+  /* width: 118px;
+  height: 50px; */
+  border-radius: 25px;
+  background: #171100;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.course-item .foot .btn-book:hover {
+  background: #ffb900;
 }
