@@ -18,7 +18,7 @@ body {
   font-family: "Poppins", serif;
 }
 
-/* =========================== */
+/* =============common============== */
 a {
   text-decoration: none;
 }
@@ -81,6 +81,21 @@ a {
     mà giá trị của width lại lớn hơn max-width thì max-width sẽ được sử dụng
     khi width < max-width thì width sẽ được dùng
   */
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.break-all {
+  word-break: break-all;
 }
 
 /* =============header============== */
@@ -383,6 +398,7 @@ a {
 }
 
 .popular .course-list .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
@@ -468,4 +484,77 @@ a {
 
 .course-item .foot .btn-book:hover {
   background: #ffb900;
+}
+
+/* ---------------------------------------feedback-------------- */
+
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0;
+  background-color: #2e2100;
+}
+
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.feedback-item {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.feedback-list .info .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback-list .info .name-stu {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.feedback-list .info .desc {
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  margin-top: 4px;
+}
+
+.feedback-list .info .dots {
+  margin-top: 28px;
+  display: flex;
+  gap: 6px;
+}
+
+.feedback-list .info .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #634700;
+  cursor: pointer;
+}
+
+.feedback-list .info .dot.active {
+  background: var(--primary-color);
+  cursor: default;
+}
+
+.feedback-item .content {
+  width: 66%;
+}
+
+.feedback-item blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54;
 }
